@@ -1,0 +1,39 @@
+.section.service{
+    display: flex;
+    flex-wrap: wrap;
+    padding:0em 3em;
+    text-align: center;
+    justify-content: center;
+    .icon{
+      
+        flex:0 0 25%;
+
+        border:thin rgba(223, 214, 214, 0.365) solid;
+        i{
+            
+            padding:.5em;
+            display: block;
+            font-size: 1.5em;
+            @include breakpoint-med{
+                font-size: 2.5em;
+                border:thin green solid;
+            }
+        }
+        a{
+         
+            border:thin blue solid;
+            text-decoration: none;
+            @include xsmhead;
+
+            @include breakpoint-large{
+                @include psmhead;
+            }
+        }
+       
+     
+
+    }
+   
+    
+    
+}

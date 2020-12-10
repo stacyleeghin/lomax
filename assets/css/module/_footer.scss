@@ -1,0 +1,68 @@
+footer{
+  
+    h1{
+        text-align: center;
+        font-family: $teko;
+        font-size: 4em;
+        
+        @include breakpoint-med{
+            font-size: 6em;
+        }
+    }
+    .yellowcontact{
+      
+        .whitetex2{
+            z-index: 50;
+            color: $white;
+            @include wteko;
+            // border: thin red solid;
+            text-align: center;
+            @include breakpoint-med{
+                font-size: 2.3em;
+            }
+            h1{
+                padding-top: 1.5em;
+                font-size: 2em;;
+            }
+       
+
+        }
+        
+      
+        border-radius: 50%;
+        background-color:$yellow;
+        width:23em; 
+        height:23em;
+        position:relative; 
+        top:4em; 
+        left:50%;
+        transform: translateX(-50%);
+        @include breakpoint-med{
+            width: 37em;
+            height:37em;
+     
+        }
+        input{
+            border-bottom:thin white solid;
+            width:15em;
+            background-color:transparent;
+            @include breakpoint-med{
+                width:25em;
+            }
+        }
+        button{
+            margin-top: 2em;
+            color:white;
+            padding:.3em;
+            background-color: transparent;
+            border: thin white solid;
+            border-radius: 20%;
+        }
+      
+    }
+    .socialmedia{
+        text-align: center;
+        padding: 5em;
+        @include socialmedia;
+    }
+}

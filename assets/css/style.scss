@@ -1,0 +1,905 @@
+@import './base';
+@import 'module/footer';
+@import 'module/.client.copy';
+@import 'module/.section.service';
+@import 'module/.navcontainer';
+
+.wrap{
+    // border:thin green solid;
+    overflow-x: hidden;
+}
+ //-------------------menu page-------------  
+
+//-----------------------landing page------------
+.section.intr{
+    .logo{
+      
+        img{
+         
+            width: 20em;
+            @include breakpoint-med{
+                width: 25em;  
+                // top:5em; 
+                // left:15em;
+            }
+            @include breakpoint-large{
+                width: 30em;  
+                // top:3em; 
+                // left:15em;
+            }
+            @include breakpoint-xlarge{
+                width:35em;  
+              
+            }
+            @include breakpoint-xxlarge{
+                width:40em; 
+                // top:-2em; 
+                // left:30em; 
+              
+            }
+            @include breakpoint-xxxlarge{
+                width:40em; 
+             
+              
+            }
+        }
+        display:inline-block;
+        position:relative; 
+            top:-10em; 
+            left:1em;  
+            z-index:3;
+
+        @include breakpoint-med{
+          
+            top:-15em; 
+            left:5em;  
+            z-index:3;
+        }
+
+        @include breakpoint-large{
+            top:-18em; 
+            left:7em; 
+            z-index:2;
+        
+        }
+        @include breakpoint-xlarge{
+            top:-22em; 
+            left:7em;  
+        }
+        @include breakpoint-xxxlarge{
+            top:-22em; 
+            left:30em;
+             
+        }
+    }
+    .navbar{
+        @include secbars
+    }
+    background-image: $bggrad;
+    height:40vh;
+    // border:thin red solid;
+    z-index:1;
+        @include breakpoint-med{
+        height:60vh;
+    }
+
+    .circle{
+        border-radius: 50%;
+        background-image:$lbggrad;
+        width:20em; 
+        height:20em;
+        position:relative; 
+        top:2em; 
+        left:1em; 
+        z-index:2;
+        @include breakpoint-med{
+            width: 25em;
+            height:25em;
+            top:2em; 
+            left:5em; 
+        }   
+        @include breakpoint-large{
+            width: 30em;
+            height:30em;
+            top:1em; 
+            left:7em; 
+            
+
+
+        }
+        @include breakpoint-xlarge{
+            width: 35em;
+            height:35em;
+            top:1em; 
+            left:7em; 
+            
+
+
+        }
+        @include breakpoint-xxlarge{
+            width: 40em;
+            height:40em;
+            top:1em; 
+            left:4em; 
+            
+
+
+        }
+        @include breakpoint-xxxlarge{
+            width: 40em;
+            height:40em;
+            top:1em; 
+            left:30em; 
+            
+
+
+        }
+    }
+    .yellow.ball1{
+        @include yball;
+        position:absolute; 
+        top:1em; 
+        left:2em; 
+        width:7em;
+        height: 7em;
+    }
+
+    .yellow.ball2{
+        @include yball;
+        position: absolute;
+        top:7em;
+        right:.2em;
+        width:10em;
+        height: 10em;
+     
+        @include breakpoint-large{
+            right:2em;
+            width:15em;
+            height: 15em;
+        }
+        @include breakpoint-xlarge{
+            right:4em;
+            width:15em;
+            height: 15em;
+        }
+    }
+
+    .yellow.ball3{
+        @include yball;
+        width:8em; 
+        height:8em;
+        position: relative;
+        top:-2em;
+        @include breakpoint-med{
+            top:-5em;
+            width:10em;
+            height: 10em;
+        }
+        @include breakpoint-xlarge{
+            right:4em;
+            width:15em;
+            height: 15em;
+        }
+    }
+}
+.section.statement{
+    position: relative;
+    z-index: 8;
+
+    h1{
+        text-align: center;
+        font-family: $rubikmo;
+        font-size: 1em;
+        margin: 2em auto;
+    }
+    @include breakpoint-med{
+        margin:0em auto;
+        top:1em;
+        left:auto;
+        font-size: 1.8em;
+        z-index: 8;
+    }
+    
+}
+.section.hero.slider{
+    margin:1em auto;
+    img{
+    width: 100%;
+    height: auto;
+    // border-radius: 60%;
+    
+    }
+    @include breakpoint-med{
+        padding:0em 5em;
+        margin:7em auto;
+        // border: thin red solid;
+    }
+}
+.section.yellow{
+    position:relative;
+    // border:thin green solid;
+    margin-top:5em;
+    @include breakpoint-med{
+        margin-top:10em;
+    }
+
+    .copy{
+       position: relative;
+       z-index: 30;
+       @include copy;
+    }
+}
+.section.work{
+   
+    .project{
+        margin:3em auto;
+
+        img{
+            width: 100%;
+            min-height: 10vh;
+            display: block;
+            @include breakpoint-med{
+                margin:0em auto;
+                width:90%;
+            }
+   
+        }
+        .box{
+            display: flex;
+            padding-top:2em;
+            .line{
+                width: 4em;
+                height: 6em;
+                border-right:4px $dpurple solid;
+               
+            }
+            .textbox{
+                padding:1em;
+                h1{
+                @include smhead;
+                @include breakpoint-med{
+                    @include mhead;
+
+                }
+                }
+                p{
+                    @include p;
+                    @include breakpoint-med{
+                        @include mp;
+                    }
+
+                }
+            }
+        }
+
+        
+    }
+}
+.section.services{
+  
+    .copy{
+        @include copy;
+        
+    }
+}
+.section.service .icon {
+    text-align: center;
+    font-size: 1em;
+    padding: 1em;
+
+ 
+    a{
+           border: none !important;
+    }
+ 
+  
+    @include breakpoint-xlarge{
+       padding: 2em;
+       font-size: 1.5em;
+       max-width: 10em;
+    }
+    img{
+       
+        font-size: 1em;
+        padding:1rem;
+        @include breakpoint-xlarge{
+            width:100%;
+           
+        }
+      
+    }
+    
+}
+
+
+
+//-----------------contact page----------//
+.section.contact{
+
+    @include breakpoint-med{
+        position:relative;
+        // border:thin green;
+     
+       
+    }
+    .navbar{
+        @include secbars;
+        
+    }
+    .section1{
+        display: flex;
+        @include breakpoint-med{
+            padding-left: 0em;
+        }
+        .boxcontact{
+            // border:thin red solid;
+            color:$dpurple;
+            font-family: $rubik;
+            font-weight: 800;
+            font-size: 3.5em;
+            text-transform: uppercase;
+            line-height: 1em;
+            padding-left:1em;
+            @include breakpoint-med{
+                font-size:7em;
+                padding-left:0em;
+                margin-left: 1em;
+            }
+        }
+        .boxyellow{
+           
+            // border:thin green solid;
+            @include breakpoint-med{
+                position: relative;
+            }
+            .circle{
+              
+                border-radius: 50%;
+                background-color:$yellow;
+                width:20em; 
+                height:20em;
+                position:relative; 
+                top:0em; 
+                left:0.5em;
+      
+                @include breakpoint-med{
+                    width: 35em;
+                    height:35em;
+                    left:1em;
+                    top:0.5em; 
+                }
+                .whitetex2{
+                    padding-top: 1.5em;
+                    z-index: 50;
+                    color: $white;
+                    font-family:$rubik;
+                    font-size:2em;
+                    font-weight: 800;
+                    letter-spacing: 5px;
+                    line-height: 1.2em;
+                    text-transform: uppercase;
+                    text-align: center;
+                    @include breakpoint-med{
+                        font-size: 4em;
+                        padding-top: 1em;
+                    
+                    }
+                }
+             
+            }
+            .us{
+                letter-spacing: 2px;
+                color:$pink;
+                font-size:7em;
+                font-family: $rubik;
+                font-weight: 900;
+                text-align: end;
+                padding-right:1em;
+                line-height: .8em;
+                @include breakpoint-med{
+                    position: absolute;
+                    bottom:0;
+                    left:.3em;
+                    font-size:12em;
+                 
+                    
+                    
+                }
+            }
+
+        }
+    }
+    .section2{
+        padding-left:3.5em;
+        margin-top: 2em;
+        // border: thin red solid;
+        @include breakpoint-med{
+           
+            position:absolute;
+            display: flex;
+            width: 60%;
+            bottom:1;
+            right:0em;
+           
+            
+            // border: thin red solid;
+            
+           
+        }
+        .studio{
+            // border: thin red solid;
+                p{
+                @include sp;
+                }
+                .address{
+                @include address;
+                }
+                @include breakpoint-med{
+                    // padding-left: 16em;
+                  
+                }
+        }
+        .get{
+            // border: thin red solid;
+                p{
+                @include sp;
+                }
+                .address{
+                @include address;
+                }
+                @include breakpoint-med{
+                    padding-left: 3em;
+                }
+        }
+            
+    }
+    
+
+} 
+
+//------------------about page-----------//
+.section.about{
+    padding-top:2em;
+    overflow: hidden;
+    .navbar{
+        @include secbars;
+        
+     
+    }
+    // border:thin red solid;
+    @include breakpoint-med{
+        position:relative;
+        // border:thin green solid;
+       
+       
+    }
+  
+}
+.section1{
+        // border:thin red solid;
+       
+        display: flex;
+        justify-content: center;
+        @include breakpoint-med{
+            padding-left: 4.5em;
+        }
+        @include breakpoint-xlarge{
+            padding-left: 2em;
+        }
+        .boxcontact{
+            // border:thin green solid;
+            color:$dpurple;
+            font-family: $rubik;
+            font-weight: 800;
+            font-size: 3.5em;
+            text-transform: uppercase;
+            line-height: 1em;
+            z-index: 40;
+            @include breakpoint-med{
+                font-size:7.4em;
+            }
+            @include breakpoint-xlarge{
+                font-size:9em;
+            }
+        }
+        .boxyellow{
+           
+            // border:thin green solid;
+            @include breakpoint-med{
+                position: relative;
+            }
+            @include breakpoint-xlarge{
+                position: relative;
+            }
+            .circle{
+              
+                border-radius: 50%;
+                background-color:$yellow;
+                width:15em; 
+                height:15em;
+                position:relative; 
+                top:0em; 
+                left:1em;
+                @include breakpoint-med{
+                    width:30em; 
+                    height:30em;
+                }
+                @include breakpoint-xlarge{
+                    width:40em; 
+                    height:40em;
+                }
+                .blacktex{
+                    padding-top:5em;
+                    padding-right:2em;
+                    z-index: 50;
+                    @include blacktex;
+                    // border:thin red solid;
+                    text-align: right;
+                    font-weight: 800;
+                    letter-spacing: 2px;
+                    line-height: 1.5em;
+                    text-transform: uppercase;
+                    // text-align: center;
+                    @include breakpoint-med{
+                        padding-top:6em;
+                        padding-right:4em;
+                       
+                        
+                    }
+                    
+                }
+            }
+
+        }
+        
+       
+}
+.us{
+        // border: thin red solid;
+        letter-spacing: 2px;
+        color:$pink;
+        font-size:5em;
+        font-family: $rubik;
+        font-weight: 900;
+        text-align: end;
+        line-height: .8em;
+        @include breakpoint-med{
+            position: absolute;
+            bottom:5;
+            left:1em;
+            font-size:10em;
+            
+        }
+        @include breakpoint-xlarge{
+            position: absolute;
+            bottom:6;
+            left:2em;
+            font-size:10em;
+            padding-top: 1rem;
+            
+        }
+    
+
+     
+        
+    
+}
+
+
+//----------------catagory page--------------//
+.section.intr.cat{
+    background-image:none;
+    height:35vh;
+    @include breakpoint-large{
+        height: 50vh;
+    }
+    .navbar{
+        position: relative;
+        z-index:4;  
+    }
+    .circle.cat{
+        // border:thin red solid;
+        border-radius: 50%;
+        background-image:$lbggrad;
+        width:25em; 
+        height:25em;
+        position:relative; 
+        top:-8em; 
+        left:-10em; 
+        z-index:2;
+        @include breakpoint-small{
+            width:30em; 
+            height:30em;
+            top:-8em; 
+            left:-13em; 
+        }
+        @include breakpoint-med{
+            width: 40em;
+            height:40em;
+            top:-15em; 
+            left:-13em; 
+        }
+        @include breakpoint-xlarge{
+            width:50em; 
+            height:50em;
+            top:-20em; 
+            left:-6em; 
+        }
+    }
+    .initials{
+        // border:thin green solid;
+        position: absolute;
+        top:3em;
+        right:2em;
+        z-index: 6;
+        text-align: right;
+        h1{
+            font-size: 1em.5;
+            font-family: $rubikmo;
+        }
+        @include breakpoint-med{
+            top:1.5em;
+            right:2em;
+     
+        }
+        @include breakpoint-large{
+            top:4em;
+            right:2em;
+
+     
+        }
+    
+        .first{
+            // border:thin red solid;
+            display: inline;
+            @include letter 
+                
+            
+        }
+        .second{
+            // border:thin red solid;
+            @include letter;
+            @include breakpoint-large{
+             display: inline;
+            }
+            @include breakpoint-xlarge{
+            display: inline;
+            }
+
+        }
+      
+    }
+}
+.section.statement.title{
+    // border:thin red solid;
+    text-align: right;
+    padding:0em 2em;
+    position: relative;
+    bottom: -6em;
+    padding-bottom: 4em;
+    @include breakpoint-med{
+        padding:0em 1em;
+    }
+    @include breakpoint-large{
+       padding:0em;
+       top: 2.5em;
+       right:1em;
+ 
+    }
+
+    .top-section-copy{
+        padding-bottom: 4em;
+        @include breakpoint-large{
+            padding-bottom: 0em;
+        }
+     
+ 
+      
+        h1{
+            margin:0;
+            // border:thin rgb(36, 199, 63) solid;
+            text-align: right;
+            font-size: 1.5em;
+        
+            @include breakpoint-large{
+                display:inline-block;
+        
+            }
+            @include breakpoint-xlarge{
+                margin-top: 0;
+             
+            }
+        }
+        p{
+            @include bteko;
+            padding-top:1em;
+            // border:thin rgb(235, 16, 169) solid;
+            @include breakpoint-med{
+                // margin-bottom:2em;
+                position: relative;
+                bottom: -1em;
+               
+              
+            }
+            @include breakpoint-large{
+          
+                display:inline-block;
+                position: relative;
+                width:90%;
+                top:-2em;
+                right:0em;
+             
+            
+        
+            }
+            @include breakpoint-xlarge{
+                margin-top: 0;
+             
+            }
+        }
+    }
+    
+}
+.section.work.cat{
+    margin: 10em 0em;
+    @include breakpoint-med{
+        margin: 6em 0em;
+    }
+    @include breakpoint-large{
+        margin:  8em 0em;
+    }
+    .project {
+        img{
+        width:100%;
+        }
+    
+    }
+    @include breakpoint-xlarge{
+        margin: 10em 0em;
+    }
+    
+}
+//-----------------------single project----------------
+
+.wrap{
+    min-height: 100vh;
+    .section.intr.sp{
+        
+        .navbar{
+            @include secbars
+        }
+        background-image:url(/assets/img/plasticmind.png);
+        background-size: cover;
+        min-height: 10vh;
+        // border:thin red solid;
+        z-index:1;
+            @include breakpoint-med{
+            height:60vh;
+        }
+            @include breakpoint-xlarge{
+            height:100vh;
+        }
+       
+    
+    }
+    .singleprotext{
+        // border:thin red solid;
+        padding:2em 3em;
+        @include breakpoint-large{
+            display: flex;
+            padding:3em;
+        }
+        .longleft{
+            @include breakpoint-large{
+                padding:3em 0em;
+            }
+            h1{
+                // border:thin red solid;
+                @include mhead;
+            }
+            p{
+                padding:2em 0em;
+                @include sp;
+               
+            }
+    
+
+        }
+        .shortright{
+            border-top:4px $dpurple solid;
+            padding:2em 0em;
+            @include breakpoint-large{
+                border-top: none;
+                padding:3em;
+            }
+            .menu ul{
+                font-size: 1em;
+                font-family: $rubikmo;
+                list-style-type: none;
+                a{
+                    color: $dpurple;
+                    text-decoration: none;
+                }
+                @include breakpoint-large{
+                    border-left:4px $dpurple solid;
+                    padding:2em;
+                }
+                
+            }
+        }
+        
+    }
+    .section.work.cat.single{
+        margin:0;
+        @include breakpoint-large{
+         display: block;
+        
+         }
+        .project{
+             margin:0;
+             .box{
+               
+                @include breakpoint-large{
+                 
+                    margin:5em;
+                    display: flex;
+                
+                    img{
+                        width:60%;
+                        margin-right: 3em;
+                    
+                    
+
+                    }
+                    
+                   
+                }
+             padding-top:0;
+             display: block;
+             
+             .tbox{
+                 padding:1em;
+
+                 border-left:4px $dpurple solid; 
+                 h1{
+                    @include mhead;
+
+                 }
+                 p{
+                    padding:2em 0em;
+                    @include sp;
+                 }
+                }
+            }
+
+            @include breakpoint-large{
+                &:nth-child(even){
+                  
+                    img{
+                        // border:green thin solid;
+                        order:2
+                    }
+                }
+            }
+        }
+      
+    }
+    .next{
+        padding-top: 5em;
+        text-align: center;
+        display: flex;
+        color:$pink;
+        justify-content: center;
+        
+        h1{
+            text-align: center;
+            @include pinknext;
+        }
+        i{
+            padding-left:1em;
+            padding-top: .3em;
+        }
+        
+
+    }
+}

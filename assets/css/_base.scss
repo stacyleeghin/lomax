@@ -1,0 +1,307 @@
+  *{
+    border:0;
+    padding:0;
+    margin:0;
+
+}
+
+//-------------------fonts-------------------------//
+@import url('https://fonts.googleapis.com/css2?family=Rubik+Mono+One&family=Rubik:wght@300;400;600;700;800&family=Teko:wght@300;400&display=swap');
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css');
+
+$rubikmo: 'Rubik Mono One', sans-serif;
+$rubik: 'Rubik', sans-serif;
+$teko: 'Teko', sans-serif;
+
+//------------------color------------------------//
+$white:#FFFFFF;
+$yellow:#FFCC00;
+$lyellow:#eed571;
+$dpurple:#7357b6;
+$bpink:#ab6db4;
+$pink:#F0B5F9;
+$lpink:#e7afee;
+$ablack:#242424;
+$bggrad: linear-gradient(180deg, $dpurple 1.20%,   $pink 97.4% );
+$rbggrad: linear-gradient(360deg, $dpurple 1.56%,   $pink 70.5% $white 1.6%);
+$lbggrad: linear-gradient(90deg, $dpurple 1.95%,  $pink 90.37%, $lpink 97.4%);
+$ybggrad: linear-gradient(255deg, $lyellow 9%,  $bpink 50%, $dpurple 97.4%);
+//--------------------mixins---------------------//
+@mixin mbars {
+    color:$pink;
+    position: absolute;
+    top:1em;
+    left:1em;
+    font-size: 2em;
+  
+    
+}
+@mixin secbars {
+    color:$pink;
+    font-size: 1.5em;
+    padding: .5em;
+    
+}
+@mixin yball{
+    border-radius: 50%;
+    background-color:$yellow;
+    width:8em; 
+    height:8em;
+
+}
+@mixin heading{
+    font-family:$rubik;
+    font-weight: 700;
+    color:$dpurple;
+}
+
+@mixin pinknext{
+    font-family: $rubik;
+    font-size: 1.5em;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: $pink;
+}
+
+@mixin psmhead{
+    font-family: $rubik;
+    font-size: 1.2em !important;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: $dpurple;
+}
+@mixin smhead{
+    font-family: $rubik;
+    font-size: 1em !important;
+    font-weight: 800;
+    text-transform: uppercase;
+}
+
+@mixin bgpurple{
+    font-family: $rubikmo;
+    font-size: 1.5em;
+    font-weight: 800;
+    text-transform: uppercase;
+    color:$dpurple;
+    @include breakpoint-med{
+        font-size: 2.4em;
+
+    }
+
+}
+@mixin smpurple{
+    font-family: $rubik;
+    font-size: 1.5em;
+    font-weight: 700;
+    text-transform: capitalize;
+    color: $dpurple;
+    @include breakpoint-med{
+        font-size: 2em;
+    }
+}
+@mixin wteko{
+    font-family: $teko;
+    font-size: 1.5em;
+    font-weight: 500;
+    color: $white;
+
+}
+@mixin bteko{
+    font-family: $teko;
+    font-size: 2rem;
+    font-weight: 500;
+    color: $ablack;
+    line-height: 1em;
+
+}
+@mixin p{
+    font-family: $rubik;
+    font-size: 1em;
+    font-weight: 500;
+    text-transform: uppercase;
+
+}
+@mixin mp{
+    font-family: $rubik;
+    font-size: 1.5em;
+    font-weight: 300;
+
+}
+
+//---------------breakpoints--------------------//
+$screen-small-min:25em;//400px
+$screen-med-min:35em;//560px
+$screen-lar-min:45em;//720px
+$screen-xlar-min:55em;//880px
+$screen-xxlar-min:75em;//1200px
+$screen-xxxlar-min:90em;//1400px
+
+@mixin breakpoint-small{
+    @media (min-width: #{$screen-small-min}){
+        @content;
+    }
+}
+@mixin breakpoint-med{
+    @media (min-width: #{$screen-med-min}){
+        @content;
+    }
+}
+@mixin breakpoint-large {
+    @media (min-width: #{$screen-lar-min}){
+        @content;
+    }
+}
+@mixin breakpoint-xlarge {
+    @media (min-width: #{$screen-xlar-min}){
+        @content;
+    }
+}
+@mixin breakpoint-xxlarge {
+    @media (min-width: #{$screen-xxlar-min}){
+        @content;
+    }
+}    
+@mixin breakpoint-xxxlarge {
+    @media (min-width: #{$screen-xxlar-min}){
+        @content;
+    }
+}
+
+
+.subtitle{
+    margin-top: 3em;
+    @include heading;
+        text-align: center;
+    @include breakpoint-med{
+        margin-top: 4em;
+        font-size:4em;
+        padding:0em 2em;
+        text-transform: uppercase;
+    }
+
+}
+        
+@mixin copy{
+    font-family: $rubik;
+    color:$dpurple;
+    text-align: center;
+    font-size: 1.5em;
+    padding: 3em;
+    font-weight: 300;
+    
+    @include breakpoint-med{
+        font-size:2em;
+    
+     
+    }
+
+}
+@mixin sp{
+    font-family: $rubik;
+    color:$ablack;
+    font-size: 1em;
+    @include breakpoint-large{
+        font-size: 1.2em;
+    }
+    @include breakpoint-xlarge{
+        font-size: 1.5em;
+    }
+}
+@mixin address{
+    margin: .5em 0em;
+    padding-bottom: 1em;
+    font-family: $teko;
+    font-size:1.5em;
+    line-height: 1em;
+    letter-spacing: 2px;
+    font-weight: 900;
+    @include breakpoint-med{
+        padding-bottom: 0;
+        margin-bottom: 0;
+        font-size:2em;
+    }
+
+}
+@mixin blacktex {
+    font-size: .8em;
+    font-family: $rubikmo;
+    @include breakpoint-med{
+        font-size: 1em;
+        padding-top: 2.3em;
+    }
+    @include breakpoint-xlarge{
+        font-size: 1.5em;
+        padding-top: 2.3em;
+    }
+}
+@mixin clientcopy{
+    font-family: $rubik;
+    color:$dpurple;
+    font-weight:500;
+
+}
+@mixin clients {
+    font-family: $rubikmo;
+    color:$dpurple;
+    font-size: 1.5em;
+    font-weight:500;
+    
+}
+
+
+@mixin socialmedia{
+    font-size: 1.5em;
+    color: $dpurple;
+  
+    @include breakpoint-med{
+        font-size: 2em;
+      
+    }
+    i{
+        padding:.2em;
+      
+        @include breakpoint-med{
+            padding: .5em;
+            
+        }
+    }
+    
+    
+}
+@mixin letter{
+    font-size: 7em;
+    color:$yellow;
+    font-family: $rubik;
+    font-weight: 800;
+    text-transform: uppercase;
+    @include breakpoint-med(){
+        font-size: 8em;
+    }
+    @include breakpoint-large{
+        font-size: 15em;
+    }
+
+
+}
+@mixin mhead{
+    font-family: $rubik;
+    font-size: 1.5em !important;
+    font-weight: 800;
+    text-transform: uppercase;
+    @include breakpoint-large{
+        font-size: 2em !important;  
+    }
+
+}
+@mixin xsmhead{
+    font-family: $rubik;
+    font-size: 1em;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: $dpurple;
+    @include breakpoint-large{
+
+    }
+   
+    
+}

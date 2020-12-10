@@ -1,0 +1,28 @@
+.client.copy{
+    text-align: center;
+    padding:2em;
+    img{
+        padding:0em 0em 2em 0em;
+    }
+    .copy{
+        padding: 3em 0em;
+    }
+   
+    h3{
+            @include smpurple;
+            // padding-bottom:1.5em;
+          
+    }
+    h1{
+            @include bgpurple;
+            padding:1.5em;
+            line-height: 1.7em;
+
+    }
+    p{
+        @include copy;
+        padding: 1em;
+        // border:thin red solid;
+
+    }
+}
